@@ -1,2 +1,1 @@
-require("evanpolk")
-print("hello")
+require("config.lazy")
