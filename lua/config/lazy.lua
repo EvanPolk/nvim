@@ -20,11 +20,15 @@ vim.opt.rtp:prepend(lazypath)
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+vim.wo.relativenumber = true
+vim.wo.number = true
+
+-- Setup remaps.lua
+require("config.remaps")
 
 -- Setup lazy.nvim
 require("lazy").setup({

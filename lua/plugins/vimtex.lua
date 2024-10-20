@@ -3,6 +3,7 @@ return {
   lazy = false,     -- we don't want to lazy load VimTeX
   init = function()
     -- VimTeX configuration goes here, e.g.
+	vim.cmd('filetype plugin indent on') -- Edit
     vim.g.vimtex_view_method = "zathura"
   end
 }
