@@ -1,4 +1,6 @@
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>w", "<C-w>w", { noremap = true, silent = true })
+
 
 -- For VimTex and Zathura
 vim.keymap.set("n", "<leader>q", ":!zathura <C-r>=expand('%:r')<cr>.pdf &<cr>")
