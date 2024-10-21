@@ -15,13 +15,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
-
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
-
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -32,8 +25,10 @@ vim.wo.number = true
 require("config.remaps")
 
 require("lazy").setup({
+	-- Importing from ./plugins
 	spec = {
 		{ import = "plugins" },
+		{ import = "plugins.lsp" },
 	},
 	-- colorscheme that will be used when installing plugins.
 	install = { colorscheme = { "habamax" } },

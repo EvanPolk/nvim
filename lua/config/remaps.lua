@@ -1,8 +1,11 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>w", "<C-w>w", { noremap = true, silent = true })
 
-
 -- For VimTex and Zathura
+-- Workaround for issues with iTerm, VimTex, and Zathura WindowID
 vim.keymap.set("n", "<leader>q", ":!zathura <C-r>=expand('%:r')<cr>.pdf &<cr>")
 
 -- For telescope.lua
