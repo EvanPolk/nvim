@@ -15,16 +15,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.wo.relativenumber = true
-vim.wo.number = true
-
-vim.o.clipboard = "unnamedplus"
 
 -- Setup remaps.lua
 require("config.remaps")
+require("config.opts")
 
 require("lazy").setup({
 	-- Importing from ./plugins
