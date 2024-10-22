@@ -21,6 +21,8 @@ vim.opt.shiftwidth = 4
 vim.wo.relativenumber = true
 vim.wo.number = true
 
+vim.o.clipboard = "unnamedplus"
+
 -- Setup remaps.lua
 require("config.remaps")
 

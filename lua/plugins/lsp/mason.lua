@@ -22,9 +22,11 @@ return {
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
+				-- TODO	
 				-- "asm_lsp",
 				"bashls",
 				"clangd",
+				-- Didn't work, TODO
 				-- "neocmake",
 				"cssls",
 				"tailwindcss",
